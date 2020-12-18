@@ -12,7 +12,3 @@ Source:
 
 # Import necessary modules
 
-
-def reverse_string(content):
-
-    return content[::-1]

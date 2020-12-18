@@ -1,6 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# the above line is to avoid 'SyntaxError: Non-UTF-8 code starting with' error
+
+'''
+Created on 
+Course work: 
+@author: raja
+Source:
+    
+'''
+
+# Import necessary modules
 from flask import Flask, request, jsonify, render_template
 from json import dumps
 import os
+import pngquant
+from enum import Enum
 
 # Local import
 import string_util as su
@@ -33,7 +48,8 @@ def api():
         'content' : 'sdf'
     }
 
-    return jsonify(result) 
+    return jsonify(result)
+
 
 if __name__ == '__main__':
     app.run( host='0.0.0.0', port=int(os.environ.get('CONTAINER_PORT')), debug=True)
